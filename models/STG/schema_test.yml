@@ -1,0 +1,19 @@
+version: 2
+
+models:
+    - name: stg_order_Apr_sample
+      description: distinct orderID without nulls
+      columns: 
+        - name: ID
+          description: primary key for order table
+          tests:
+           - unique
+           - not_null
+    - name: stg_payment_sample
+      descriptiion: accepted values for payment method
+      columns:
+        - name: payment_method
+          description: different payment methods in payment table
+          tests:
+           - accepted_values:
+                values: ['credit_card', 'coupon', 'bank_transfer','gift_card']
