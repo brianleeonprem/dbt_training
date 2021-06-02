@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+    - name: PUBLIC
+      database: DBT_TRAINING
+      tables: 
+        - name: ORDERS
+        - name: PAYMENTS
