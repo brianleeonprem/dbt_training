@@ -1,3 +1,6 @@
+{{ config (
+    materialized = "table"
+    )}}
 
 with PAYMENTS as (
 select

@@ -1,3 +1,7 @@
+{{ config (
+    materialized = "view"
+    )}}
+
 with payment as (
 
     select * from {{ ref('stg_payment_sample')}}
